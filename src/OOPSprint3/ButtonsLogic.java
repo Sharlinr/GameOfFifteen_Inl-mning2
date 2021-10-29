@@ -23,6 +23,23 @@ public class ButtonsLogic extends JButton implements ActionListener {
 
     }
 
+    public void swap(ButtonsLogic buttonSwap) {
+        buttonSwap.myDestination = myDestination;
+        buttonSwap.setText(buttonSwap.myDestination + "");
+        myDestination = 0;
+        setText("");
+
+    }
+
+    public void setDestination(int myDestination) {
+        this.myDestination = myDestination;
+        String buttonName = "" + myDestination;
+        if (myDestination == 0) {
+            buttonName = "";
+        }
+        setText(buttonName);
+    }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
