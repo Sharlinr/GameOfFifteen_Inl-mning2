@@ -34,7 +34,7 @@ public class Panel extends JFrame implements ActionListener {
         for (int i = 0; i < 16; ++i) {
             randomize.add(i);
         }
-        Collections.shuffle(randomize);
+      //  Collections.shuffle(randomize);
         for (int i = 0; i < 16; ++i) {
             String buttonName = "" + randomize.get(i);
             if (buttonName.equals("0")) {
