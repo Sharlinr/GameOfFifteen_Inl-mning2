@@ -21,6 +21,7 @@ public class ButtonsLogic extends JButton implements ActionListener {
         this.panel = panel;
         addActionListener(this);
 
+
     }
 
     public void swap(ButtonsLogic buttonSwap) {
