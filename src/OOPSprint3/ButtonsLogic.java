@@ -29,6 +29,7 @@ public class ButtonsLogic extends JButton implements ActionListener {
         buttonSwap.setText(buttonSwap.myDestination + "");
         myDestination = 0;
         setText("");
+        panel.checkWin();
 
     }
 

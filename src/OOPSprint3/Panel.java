@@ -7,15 +7,14 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import static javax.swing.JOptionPane.showMessageDialog;
+
 public class Panel extends JFrame implements ActionListener {
 
     ArrayList<ButtonsLogic> buttonList = new ArrayList<>();
     ArrayList<Integer> randomize = new ArrayList<>();
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
 
-    }
     JButton buttonNewGame = new JButton("Nytt Spel");
     JPanel p = new JPanel();
     JPanel p2 = new JPanel();
@@ -53,4 +52,30 @@ public class Panel extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
     }
+
+    public void newGame() {
+        Collections.shuffle(randomize);
+        for (int i = 0; i < 16; i++) {
+            buttonList.get(i).setDestination(randomize.get(i));
+        }
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        newGame();
+    }
+
+    public void checkWin() {
+        boolean buttonsInOrder = true;
+
+        for (int i = 0; i < 16; i++) {
+            if (buttonList.get(i).myDestination != buttonList.get(i).finalPlacement) {
+                buttonsInOrder = false;
+                break;
+            }
+        }
+        if (buttonsInOrder) {
+            showMessageDialog(null, "Congratulations, you rock!");
+        }
+    }
+
 }
