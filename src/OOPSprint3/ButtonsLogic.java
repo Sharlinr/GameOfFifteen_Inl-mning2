@@ -21,7 +21,6 @@ public class ButtonsLogic extends JButton implements ActionListener {
         this.panel = panel;
         addActionListener(this);
 
-
     }
 
     public void swap(ButtonsLogic buttonSwap) {
@@ -30,7 +29,6 @@ public class ButtonsLogic extends JButton implements ActionListener {
         myDestination = 0;
         setText("");
         panel.checkWin();
-
     }
 
     public void setDestination(int myDestination) {
@@ -41,7 +39,6 @@ public class ButtonsLogic extends JButton implements ActionListener {
         }
         setText(buttonName);
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -71,7 +68,5 @@ public class ButtonsLogic extends JButton implements ActionListener {
             }
         } // Check right
     }
-
-
 
 }

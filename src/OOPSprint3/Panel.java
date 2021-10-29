@@ -14,7 +14,6 @@ public class Panel extends JFrame implements ActionListener {
     ArrayList<ButtonsLogic> buttonList = new ArrayList<>();
     ArrayList<Integer> randomize = new ArrayList<>();
 
-
     JButton buttonNewGame = new JButton("Nytt Spel");
     JPanel p = new JPanel();
     JPanel p2 = new JPanel();
@@ -50,7 +49,6 @@ public class Panel extends JFrame implements ActionListener {
         pack();
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
     }
 
     public void newGame() {
@@ -59,6 +57,7 @@ public class Panel extends JFrame implements ActionListener {
             buttonList.get(i).setDestination(randomize.get(i));
         }
     }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         newGame();
@@ -77,5 +76,4 @@ public class Panel extends JFrame implements ActionListener {
             showMessageDialog(null, "Congratulations, you rock!");
         }
     }
-
 }
