@@ -28,6 +28,5 @@ public class Panel extends JFrame implements ActionListener {
 
         buttonNewGame.addActionListener(this);
 
-
     }
 }
